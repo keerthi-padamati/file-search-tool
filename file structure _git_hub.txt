@@ -1,0 +1,27 @@
+file-searcher/
+│
+├─ src/
+│   └─ file_searcher.java
+│
+├─ README.md
+├─ .gitignore
+└─ LICENSE  (optional, MIT or Apache recommended)
+
+
+
+
+
+# File Searcher
+
+A simple multi-drive file searcher in Java. This program searches all available drives for a file with a given name (with or without extension) and returns all matching paths.
+
+## Features
+- Automatically detects all drives in your system.
+- Multi-threaded search for faster results.
+- Handles multiple files with the same name.
+- Works with or without file extensions.
+- Gracefully handles inaccessible drives.
+
+## How to Run
+
+1. Clone the repository:
