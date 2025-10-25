@@ -1,27 +1,9 @@
-file-searcher/
-│
-├─ src/
-│   └─ file_searcher.java
-│
-├─ README.md
-├─ .gitignore
-└─ LICENSE  (optional, MIT or Apache recommended)
+Compilation - javac FileSearcher.java
 
+Exectuion - java FileSearcher
 
+After This Running This Commands Your Drives Will Be Dectected Automatically.
 
+Later Enter The Name Of The File / Folder You Want To Search 
 
-
-# File Searcher
-
-A simple multi-drive file searcher in Java. This program searches all available drives for a file with a given name (with or without extension) and returns all matching paths.
-
-## Features
-- Automatically detects all drives in your system.
-- Multi-threaded search for faster results.
-- Handles multiple files with the same name.
-- Works with or without file extensions.
-- Gracefully handles inaccessible drives.
-
-## How to Run
-
-1. Clone the repository:
+Then You Will Get The Path's Where The Files/Folders Are Present In Your FileManager 
