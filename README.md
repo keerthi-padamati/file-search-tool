@@ -37,3 +37,6 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
    - Number of threads used
 
 ---
+
+
+## 💻 Example Output
