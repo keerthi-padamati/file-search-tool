@@ -23,3 +23,17 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 - `java.util.concurrent.*` for parallel processing
 
 ---
+
+## 🧠 How It Works
+
+1. Lists all **available system drives** (e.g., `C:\`, `D:\`, etc.)
+2. Prompts the user to enter a file or folder name to search.
+3. Spawns multiple parallel search tasks using a **ForkJoinPool**:
+   - Each task recursively scans directories.
+   - Matches are collected into a **thread-safe queue** (`ConcurrentLinkedQueue`).
+4. When all tasks finish, it prints:
+   - All matching file/folder paths  
+   - Total time taken  
+   - Number of threads used
+
+---
