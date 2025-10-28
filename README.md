@@ -62,3 +62,7 @@ Search completed in 3.27 seconds using 32 threads.
    ```bash
    git clone https://github.com/keerthi-padamati/File_searcher.git
 
+   Open the project in your IDE (e.g., IntelliJ, Eclipse, or VS Code).
+   javac -d out src/File_searcher/file_searcher.java
+
+
