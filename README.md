@@ -40,3 +40,15 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 
 
 ## 💻 Example Output
+Detecting drives...
+C:
+D:
+E:\
+
+Enter the file/folder name to search: sample.txt
+
+Files/Folders found:
+C:\Users\Keerthi\Documents\sample.txt
+D:\Backup\sample.txt
+
+Search completed in 3.27 seconds using 32 threads.
