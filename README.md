@@ -68,3 +68,14 @@ Search completed in 3.27 seconds using 32 threads.
 5.   java -cp out File_searcher.file_searcher
 
 
+Notes
+
+Requires read permissions on drives to access subdirectories.
+
+Skips restricted or inaccessible folders silently.
+
+Handles both file names (e.g., notes.txt) and folder names (e.g., Documents).
+
+Large file systems may take a few seconds depending on thread count and system I/O speed.
+
+
