@@ -66,6 +66,6 @@ Search completed in 3.27 seconds using 32 threads.
 3.   
    javac -d out src/File_searcher/file_searcher.java
 4.Run the program.
-java -cp out File_searcher.file_searcher
+5. java -cp out File_searcher.file_searcher
 
 
