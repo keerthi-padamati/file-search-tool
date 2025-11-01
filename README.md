@@ -5,7 +5,7 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 
 ---
 
-## ⚙️ Features
+##  Features
 
 - **Multi-threaded search** using Java’s `ForkJoinPool`
 -  Scans all available system drives automatically
@@ -16,7 +16,7 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 
 ---
 
-## 🧰 Technologies Used
+##  Technologies Used
 
 - **Java 17+** (or any modern version supporting `ForkJoinPool` and NIO)
 - `java.nio.file.*` for efficient filesystem traversal
@@ -24,7 +24,7 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 1. Lists all **available system drives** (e.g., `C:\`, `D:\`, etc.)
 2. Prompts the user to enter a file or folder name to search.
@@ -39,7 +39,7 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 ---
 
 
-## 💻 Example Output
+##  Example Output
 Detecting drives...
 C:
 D:
