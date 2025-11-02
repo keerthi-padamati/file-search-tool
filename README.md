@@ -69,14 +69,14 @@ Search completed in 3.27 seconds using 32 threads.
 
 ---
 
-Notes
+## Notes
 
-Requires read permissions on drives to access subdirectories.
+- Requires read permissions on drives to access subdirectories.
 
-Skips restricted or inaccessible folders silently.
+- Skips restricted or inaccessible folders silently.
 
-Handles both file names (e.g., notes.txt) and folder names (e.g., Documents).
+- Handles both file names (e.g., notes.txt) and folder names (e.g., Documents).
 
-Large file systems may take a few seconds depending on thread count and system I/O speed.
+- Large file systems may take a few seconds depending on thread count and system I/O speed.
 
 
