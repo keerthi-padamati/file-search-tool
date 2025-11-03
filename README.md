@@ -63,9 +63,8 @@ Search completed in 3.27 seconds using 32 threads.
    git clone https://github.com/keerthi-padamati/File_searcher.git
 
 2.   Open the project in your IDE (e.g., IntelliJ, Eclipse, or VS Code).
-3.   javac -d out src/File_searcher/file_searcher.java
-4.   Run the program.
-5.   java -cp out File_searcher.file_searcher
+3.   Compile the program ``` javac -d out src/File_searcher/file_searcher.java ```
+4.   Run the program ``` java -cp out File_searcher.file_searcher ```
 
 ---
 
