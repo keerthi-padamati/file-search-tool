@@ -1,9 +1,0 @@
-Compilation - javac FileSearcher.java
-
-Exectuion - java FileSearcher
-
-After This Running This Commands Your Drives Will Be Dectected Automatically.
-
-Later Enter The Name Of The File / Folder You Want To Search 
-
-Then You Will Get The Path's Where The Files/Folders Are Present In Your FileManager 
