@@ -43,7 +43,6 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 Detecting drives...
 C:
 D:
-E:\
 
 Enter the file/folder name to search: sample.txt
 
