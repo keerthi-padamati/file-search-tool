@@ -19,8 +19,8 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 ##  Technologies Used
 
 - **Java 17+** (or any modern version supporting `ForkJoinPool` and NIO)
-- `java.nio.file.*` for efficient filesystem traversal
-- `java.util.concurrent.*` for parallel processing
+- `java.nio.file.*;` for efficient filesystem traversal
+- `java.util.concurrent.*;` for parallel processing
 
 ---
 
