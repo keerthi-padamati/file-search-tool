@@ -39,7 +39,6 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 
 ---
 
-
 ##  Example Output
 Detecting drives...
 C:
@@ -52,7 +51,6 @@ C:\Users\Keerthi\Documents\sample.txt
 D:\Backup\sample.txt
 
 Search completed in 3.27 seconds using 32 threads.
-
 
 ---
 
