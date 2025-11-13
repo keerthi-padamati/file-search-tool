@@ -50,7 +50,8 @@ Files/Folders found:
 C:\Users\Keerthi\Documents\sample.txt
 D:\Backup\sample.txt
 
-Search completed in 3.27 seconds using 32 threads.
+Search completed in 2.27 seconds using 32 threads.
+
 
 ---
 
