@@ -24,7 +24,6 @@ It scans all available drives in parallel using a **ForkJoinPool**, providing qu
 
 ---
 
-
 ##  How It Works
 
 1. Lists all **available system drives** (e.g., `C:\`, `D:\`, etc.)
