@@ -40,7 +40,7 @@ public class file_searcher
               int i = searchName.lastIndexOf('.');
               baseName = searchName.substring(0, i);
               extName = searchName.substring(i + 1);
-            } 
+          } 
           else
           {
               baseName = searchName;
