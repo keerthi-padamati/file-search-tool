@@ -1,5 +1,3 @@
-package File_searcher;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
@@ -8,7 +6,8 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.*;
 
-public class file_searcher{
+public class file_searcher
+{
 
   private static final Queue<Path> foundPaths = new ConcurrentLinkedQueue<>();
 
