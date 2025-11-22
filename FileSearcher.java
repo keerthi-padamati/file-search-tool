@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 
 public class file_searcher
 {
-
+  // thread-safe queue to store all found matching file/folder paths
   private static final Queue<Path> foundPaths = new ConcurrentLinkedQueue<>();
 
   public static void main(String[] args)
@@ -16,7 +16,7 @@ public class file_searcher
       try (Scanner input = new Scanner(System.in))
       {
         
-      // detecting the files
+      // detecting the 
               
             System.out.println("Detecting drives...");
             File[] drives = File.listRoots();
