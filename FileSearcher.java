@@ -55,7 +55,9 @@ public class file_searcher
             // record start time to measure how long the search takes
             long start = System.currentTimeMillis();
 
-        // used java buil-in forkjoinPool with either selction max(16, total threads available at runtime)
+        
+            // ---- create a ForkJoinPool for parallel directory searching ----
+            // uses either 16 threads OR (CPU cores * 4), whichever is larger
             try (ForkJoinPool pool = new ForkJoinPool(Math.max(16, Runtime.getRuntime().availableProcessors() * 4)))
             {
               
