@@ -51,9 +51,11 @@ public class file_searcher
 
         // intialize a varibale start to indicate the serach time starting 
             long start = System.currentTimeMillis();
-        
+
+        // used java buil-in forkjoinPool with either selction max(16, total threads available at runtime)
             try (ForkJoinPool pool = new ForkJoinPool(Math.max(16, Runtime.getRuntime().availableProcessors() * 4)))
             {
+              
                 for (File drive : drives)
                 {
                     if (drive.exists() && drive.canRead())
