@@ -36,7 +36,10 @@ public class file_searcher
               
             String baseName;
             String extName;
-            // check if entered file name has an extension or not if it has then seperate the file name from extension 
+
+            // separate the entered name into base name and extension
+            // Example: "photo.jpg" → base="photo", ext="jpg"
+        
             if (searchName.contains("."))
             {
                 int i = searchName.lastIndexOf('.');
@@ -48,8 +51,8 @@ public class file_searcher
                 baseName = searchName;
                 extName = "";
             }
-
-        // intialize a varibale start to indicate the serach time starting 
+        
+            // record start time to measure how long the search takes
             long start = System.currentTimeMillis();
 
         // used java buil-in forkjoinPool with either selction max(16, total threads available at runtime)
