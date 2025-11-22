@@ -48,7 +48,8 @@ public class file_searcher
                 baseName = searchName;
                 extName = "";
             }
-              
+
+        // intialize a varibale start to indicate the serach time starting 
             long start = System.currentTimeMillis();
         
             try (ForkJoinPool pool = new ForkJoinPool(Math.max(16, Runtime.getRuntime().availableProcessors() * 4)))
