@@ -36,7 +36,7 @@ public class file_searcher
               
             String baseName;
             String extName;
-                
+            // check if entered file name has an extension or not if it has then seperate the file name from extension 
             if (searchName.contains("."))
             {
                 int i = searchName.lastIndexOf('.');
