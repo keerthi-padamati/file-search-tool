@@ -22,10 +22,12 @@ public class file_searcher
             File[] drives = File.listRoots();
             if (drives == null || drives.length == 0)
             {
+              // IF NO DRIVES ARE FOUND THEN JUST SIMPLY STOP THE FLOW OF EXECTUIYION BY USING RETURN 
               System.out.println("No drives found.");
               return;
             }
-              
+
+        // printing all drives found (e.g; c:\,d:\,e:\......)
             for (File d : drives)
               System.out.println(d.getAbsolutePath());
                           
