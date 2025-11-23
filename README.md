@@ -43,7 +43,7 @@ Detecting drives...
 C:
 D:
 
-Enter the file/folder name to search: sample.txt
+Enter the file/folder name to search: SAMPLE.txt
 
 Files/Folders found:
 C:\Users\Keerthi\Documents\sample.txt
