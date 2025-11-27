@@ -93,52 +93,52 @@ public class file_searcher
 
   static class SearchTask extends RecursiveAction 
   {
-    private final Path dir;
-    private final String base;
-    private final String ext;
+      private final Path dir;
+      private final String base;
+      private final String ext;
 
-    SearchTask(Path dir, String base, String ext)
-    {
-        this.dir = dir;
-        this.base = base;
-        this.ext = ext;
-    }
-    @Override
-    protected void compute()
-    {
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) 
-        {
-          List<SearchTask> subtasks = new CopyOnWriteArrayList<>();
-          for (Path path : stream)
-          {
-            try 
-            {
-                if (Files.isDirectory(path, LinkOption.NOFOLLOW_LINKS))
-                {
-                  String name = path.getFileName().toString();
-                  if (name.equalsIgnoreCase(base))
-                  foundPaths.add(path);
-                  subtasks.add(new SearchTask(path, base, ext));
-                } 
-                else
-                {
-                  String name = path.getFileName().toString();
-                  int dot = name.lastIndexOf('.');
-                  String b = dot >= 0 ? name.substring(0, dot) : name;
-                  String e = dot >= 0 ? name.substring(dot + 1) : "";
-                  if (b.equalsIgnoreCase(base) &&(ext.isEmpty() || e.equalsIgnoreCase(ext)))
-                    foundPaths.add(path);
-                  }
-               }
-            catch (Exception ignored) 
-            {
-            }
-        }
-        invokeAll(subtasks);
-      } 
-      catch (IOException ignored)
+      SearchTask(Path dir, String base, String ext)
       {
+          this.dir = dir;
+          this.base = base;
+          this.ext = ext;
       }
+      @Override
+      protected void compute()
+      {
+          try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) 
+          {
+            List<SearchTask> subtasks = new CopyOnWriteArrayList<>();
+            for (Path path : stream)
+            {
+              try 
+              {
+                  if (Files.isDirectory(path, LinkOption.NOFOLLOW_LINKS))
+                  {
+                    String name = path.getFileName().toString();
+                    if (name.equalsIgnoreCase(base))
+                    foundPaths.add(path);
+                    subtasks.add(new SearchTask(path, base, ext));
+                  } 
+                  else
+                  {
+                    String name = path.getFileName().toString();
+                    int dot = name.lastIndexOf('.');
+                    String b = dot >= 0 ? name.substring(0, dot) : name;
+                    String e = dot >= 0 ? name.substring(dot + 1) : "";
+                    if (b.equalsIgnoreCase(base) &&(ext.isEmpty() || e.equalsIgnoreCase(ext)))
+                      foundPaths.add(path);
+                    }
+                 }
+              catch (Exception ignored) 
+              {
+              }
+          }
+          invokeAll(subtasks);
+        } 
+        catch (IOException ignored)
+        {
+        }
+    }
   }
-  }
-  }
+}
