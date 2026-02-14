@@ -61,11 +61,13 @@ git clone https://github.com/keerthi-padamati/file-search-tool.git
 ```
 
 2. Compile the program
-``` javac file_searcher.java
+``` bash
+javac file_searcher.java
 ```
 
 4. Run the search tool
-```java file_searcher
+```bash
+java file_searcher
 ```
 ---
 
