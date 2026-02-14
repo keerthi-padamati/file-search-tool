@@ -27,7 +27,7 @@ Unlike traditional file search tools that scan directories one at a time, this p
 
 ---
 
-##  Performance Optimizations (Expert-Level)
+##  Performance Optimizations 
 
 This project is not a basic loop. It uses **professional-grade techniques**:
 
