@@ -1,81 +1,80 @@
-#  File Searcher
+# 🚀 file-search-tool
 
-**File Searcher** is a fast, concurrent Java utility that searches your entire computer for files or folders by name.  
-It scans all available drives in parallel using a **ForkJoinPool**, providing quick and efficient results even across large file systems.
-
----
-
-##  Features
-
-- **Multi-threaded search** using Java’s `ForkJoinPool`
--  Scans all available system drives automatically
--  Supports both **file and folder** name searches
--  Case-insensitive matching
--  Displays total search time and thread usage
--  Safe concurrent result collection using `ConcurrentLinkedQueue`
+A high-performance, multi-threaded file discovery tool built in Java.  
+This project demonstrates **industry-level concurrency and performance optimization** by scanning entire system drives in seconds.
 
 ---
 
-##  Technologies Used
+## 🧐 What is this project?
 
-- **Java 17+** (or any modern version supporting `ForkJoinPool` and NIO)
-- `java.nio.file.*;` for efficient filesystem traversal
-- `java.util.concurrent.*;` for parallel processing
+`file-search-tool` is a command-line utility that searches for files or folders across your **entire computer**.
 
----
-
-##  How It Works
-
-1. Lists all **available system drives** (e.g., `C:\`, `D:\`, etc.)
-2. Prompts the user to enter a file or folder name to search.
-3. Spawns multiple parallel search tasks using a **ForkJoinPool**:
-   - Each task recursively scans directories.
-   - Matches are collected into a **thread-safe queue** (`ConcurrentLinkedQueue`).
-4. When all tasks finish, it prints:
-   - All matching file/folder paths  
-   - Total time taken  
-   - Number of threads used
+Unlike traditional file search tools that scan directories one at a time, this project:
+- Breaks the workload into **hundreds of small tasks**
+- Executes them **in parallel**
+- Utilizes **all available CPU cores** for maximum speed
 
 ---
 
-##  Example Output
+## ⚡ Standard Search vs `file-search-tool`
 
-Detecting drives...
-C:
-D:
-
-Enter the file/folder name to search: SAMPLE.txt
-
-Files/Folders found:
-C:\Users\Keerthi\Documents\sample.txt
-D:\Backup\sample.txt
-
-Search completed in 2.27 seconds using 32 threads.
+| Feature | Standard File Explorer | `file-search-tool` |
+|------|-----------------------|--------------------|
+| Search Logic | Sequential (one folder at a time) | **Parallel (many folders at once)** |
+| CPU Usage | Low (single core) | **High (uses all cores)** |
+| Algorithm | Simple recursion | **Fork-Join / Work-Stealing** |
+| Speed | Often slow | **Near-instant results** |
 
 ---
 
-## How to Run
+## 🛠️ Performance Optimizations (Expert-Level)
 
-1. **Clone the repository**
-   ```bash 
-   git clone https://github.com/keerthi-padamati/File_searcher.git
+This project is not a basic loop. It uses **professional-grade techniques**:
 
-2.   Open the project in your IDE (e.g., IntelliJ, Eclipse, or VS Code).
-3.   Compile the program : ``` javac -d out src/File_searcher/file_searcher.java ```
-4.   Run the program  : ``` java -cp out File_searcher.file_searcher ```
+### Fork-Join Framework
+- Uses `RecursiveAction` to split directory traversal into many tasks
+- Idle threads automatically **steal work** from busy threads
+- Ensures maximum CPU utilization
+
+### Directory Streaming
+- Uses `Files.newDirectoryStream`
+- Avoids `File.listFiles()` which is slow and memory-heavy
+- Efficient for directories with thousands of files
+
+### Lock-Free Progress Tracking
+- Uses `LongAdder` for tracking scanned items
+- Prevents thread contention
+- Allows millions of updates with zero slowdown
+
+### Smart Error Handling
+- Automatically skips protected system directories
+- Handles `AccessDeniedException` safely
+- Search continues without crashing
 
 ---
 
-## Notes
+## 🚀 How to Run
 
-- Requires read permissions on drives to access subdirectories.
+### 1. Clone the repository
+```bash
+git clone https://github.com/keerthi-padamati/file-search-tool.git
 
-- Skips restricted or inaccessible folders silently.
+2. Compile the program : javac file_searcher.java
 
-- Handles both file names (e.g., notes.txt) and folder names (e.g., Documents).
+3. Run the search tool : java file_searcher
+```
+---
 
-- Large file systems may take a few seconds depending on thread count and system I/O speed.
+### Sample Output
+Detecting system drives...
+Drive: C:\
+Drive: D:\
 
+Enter file/folder name to search: project_final
+Total items scanned: 1,245,890...
 
+--- Search Results ---
+[MATCH] C:\Users\Admin\Documents\project_final.docx
+[MATCH] D:\Backup\Work\source\project_final.zip
 
-
+Search completed in 1.45 seconds using 16 threads.
