@@ -1,11 +1,11 @@
-# 🚀 file-search-tool
+#  file-search-tool
 
 A high-performance, multi-threaded file discovery tool built in Java.  
 This project demonstrates **industry-level concurrency and performance optimization** by scanning entire system drives in seconds.
 
 ---
 
-## 🧐 What is this project?
+##  What is this project?
 
 `file-search-tool` is a command-line utility that searches for files or folders across your **entire computer**.
 
@@ -16,7 +16,7 @@ Unlike traditional file search tools that scan directories one at a time, this p
 
 ---
 
-## ⚡ Standard Search vs `file-search-tool`
+##  Standard Search vs `file-search-tool`
 
 | Feature | Standard File Explorer | `file-search-tool` |
 |------|-----------------------|--------------------|
@@ -27,7 +27,7 @@ Unlike traditional file search tools that scan directories one at a time, this p
 
 ---
 
-## 🛠️ Performance Optimizations (Expert-Level)
+##  Performance Optimizations (Expert-Level)
 
 This project is not a basic loop. It uses **professional-grade techniques**:
 
@@ -53,15 +53,19 @@ This project is not a basic loop. It uses **professional-grade techniques**:
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/keerthi-padamati/file-search-tool.git
+```
 
-2. Compile the program : javac file_searcher.java
+2. Compile the program
+``` javac file_searcher.java
+```
 
-3. Run the search tool : java file_searcher
+4. Run the search tool
+```java file_searcher
 ```
 ---
 
